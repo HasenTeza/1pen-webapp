@@ -1,0 +1,24 @@
+<view class="zitidian">
+  <block wx:for="{{zitidian}}" wx:for-index="index" wx:key="item">
+    <view class='list' data-menction_id= "{{item.menction_id}}" bindtap='btn'>
+      <view class='title'>
+        <text>No{{index+1}}.</text>{{item.name}}</view>
+      <view class='content'>
+        <view class='view_'>
+          <text class='text1'>地址：</text>
+          <!-- <text class='text2'>{{item.province}}{{item.city}}{{item.area}}{{item.address}}</text> -->
+          <text class='text2'>{{item.address}}</text>
+        </view>
+        <view class='view_'>
+          <text class='text1'>联系人：</text>
+          <text class='text2'>{{item.contacts}}</text>
+        </view>
+        <view class='view_'>
+          <text class='text1'>电话：</text>
+          <text class='text2'>{{item.mobile}}</text>
+        </view>
+      </view>
+    </view>
+  </block>
+
+</view>

@@ -1,0 +1,28 @@
+<!--miniprogram/pages/jiaofei/jiaofei_place/jiaofei_place.wxml-->
+<view class='head'>
+  <image class='head_img' src='../../../imgs/logo.jpg'></image>
+</view>
+<view class='juzhong'>
+<picker name="picker_hx" class="cybm_pic_1" data-selecthx="{{pic_array[hx_index].name}}" range="{{pic_array}}" range-key="{{'name'}}" bindchange="bindPickerChange_xq">
+  <view class='across'>
+    <text>小区：</text>
+    <text class='border' name='xq' value="{{pic_array[hx_index].name?pic_array[hx_index].name:'请选择小区(必填)'}}">{{pic_array[hx_index].name}}</text>
+  </view>
+</picker>
+
+<picker name="picker_hx" class="cybm_pic_1" data-selecthx="{{ld_array[ld_index].name}}" range="{{ld_array}}" range-key="{{'name'}}" bindchange="bindPickerChange_ld">
+  <view class='across'>
+    <text>楼栋：</text>
+    <text class='border' name='ld' value="{{ld_array[ld_index].name?ld_array[ld_index].name:'请选择楼栋(必填)'}}">{{ld_array[ld_index].name}}</text>
+  </view>
+</picker>
+
+
+<picker name="picker_hx" class="cybm_pic_1" data-selecthx="{{fw_array[fw_index].name}}" range="{{fw_array}}" range-key="{{'name'}}" bindchange="bindPickerChange_fw">
+  <view class='across'>
+    <text>房号：</text>
+    <text class='border' value="{{fw_array[fw_index].name?fw_array[fw_index].name:'请选择房号(必填)'}}">{{fw_array[fw_index].name}}</text>
+  </view>
+</picker>
+</view>
+<view class='btn' bindtap='login'>确定</view>

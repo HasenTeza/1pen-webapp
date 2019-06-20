@@ -1,0 +1,13 @@
+<view class='tj_fenqi'>
+  <view class='content'>
+    <view class='text1'>缓解资金无压力，分期缴纳供暖费</view>
+    <view class='text2'>名额有限，剩余最后6个名额</view>
+    <!-- <input placeholder-class="placeHolderSty" value="{{tenantInfo.mobile}}" placeholder="请输入订单金额" bindblur="mobileInput" bindinput='formName2' /> -->
+    <view class='input'>
+    <image class='img' src='../../../imgs/dianhua.png'></image>
+      <input placeholder-class="placeHolderSty" placeholder="请输入本人常用手机号" bindblur="mobileInput" bindinput='mobileInput' />
+    </view>
+    <view class='text3'>提交后，客服人员会与您进一步沟通联系</view>
+    <view class='btn' bindtap='btn'>立即提交</view>
+  </view>
+</view>

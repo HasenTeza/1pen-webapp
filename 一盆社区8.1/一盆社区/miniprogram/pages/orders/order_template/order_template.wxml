@@ -1,0 +1,185 @@
+<!--order_template.wxml-->
+<!-- 未使用__待付款 -->
+<template name="unconfirm_order_info">
+  <view class="order_info">
+    <view class="first_floor" data-orderid="{{order_no}}" data-model="{{pro_info}}" bindtap="detailOrder">
+      <view class="order_no_view">
+        <text class="order_no">订单号：{{order_no}}</text>
+      </view>
+      <view class="pay_status_view">
+        <text class="pay_status">{{status_text}}</text>
+      </view>
+    </view>
+    <view class="thin_line"></view>
+    <block wx:for="{{pro_info}}" wx:for-item="itemPro" wx:key="item">
+      <view class="second_floor" data-orderid="{{order_no}}" data-model="{{pro_info}}" bindtap="detailOrder">
+        <view class="image_view">
+          <image class="pro_image" src="http://www.1psq.cn/{{itemPro.thumb}}"></image>
+        </view>
+        <view class="pro_name_view">
+          <text class="pro_name">{{itemPro.p_name}}</text>
+          <text class="guige">规格：{{itemPro.con_content1 + " " + itemPro.con_content2}}</text>
+        </view>
+      </view>
+      <view class="thin_line"></view>
+    </block>
+    <view class="third_floor">
+      <view class="amount_view">
+        <text class="amount">订单金额：{{amount}}</text>
+      </view>
+      <!-- <view class="buttons" style="width:25%; margin-left:25%;">
+        <view class="payment_button_view" data-orderid="{{order_id}}">
+          <text class="payment_button" data-orderid="{{order_id}}" >查看物流</text>
+        </view>
+      </view> -->
+    </view>
+  </view>
+  <view class="strong_line"></view>
+</template>
+<!-- 待付款 -->
+<template name="pre_pay_order_info">
+  <view class="order_info">
+    <view class="first_floor" data-orderid="{{order_no}}" data-model="{{pro_info}}" bindtap="detailOrder">
+      <view class="order_no_view">
+        <text class="order_no">订单号：{{order_no}}</text>
+      </view>
+      <view class="pay_status_view">
+        <text class="pay_status">{{status_text}}</text>
+      </view>
+    </view>
+    <view class="thin_line"></view>
+    <block wx:for="{{pro_info}}" wx:for-item="itemPro" wx:key="item">
+      <view class="second_floor" data-orderid="{{order_no}}" data-model="{{pro_info}}" bindtap="detailOrder">
+        <view class="image_view">
+          <image class="pro_image" src="http://www.1psq.cn/{{itemPro.thumb}}"></image>
+        </view>
+        <view class="pro_name_view">
+          <text class="pro_name">{{itemPro.p_name}}</text>
+          <text class="guige">规格：{{itemPro.con_content1 + " " + itemPro.con_content2}}</text>
+        </view>
+      </view>
+      <view class="thin_line"></view>
+    </block>
+    <view class="third_floor">
+      <view class="amount_view">
+        <text class="amount">订单金额：{{amount}}</text>
+      </view>
+      <view class="buttons" style='font-size:24rpx;'>
+        <view class="pre_payment_button_view tj_qinglun" data-orderid="{{order_id}}" bindtap="pay">
+          <text class="pre_payment_button" data-orderid="{{order_id}}" bindtap="pay" >去付款</text>
+        </view>
+        <view class="pre_payment_button_view tj_qinglun" data-orderid="{{order_id}}" bindtap="quxiao" style='background:#888'>
+          <text class="pre_payment_button" data-orderid="{{order_id}}"  bindtap="cancelOrder">取消订单</text>
+        </view>
+      </view>
+    </view>
+  </view>
+  <view class="strong_line"></view>
+</template>
+<!-- 待收货 -->
+<template name="confirm_receive_order_info">
+  <view class="order_info">
+    <view class="first_floor" data-orderid="{{order_no}}" data-model="{{pro_info}}" bindtap="detailOrder">
+      <view class="order_no_view">
+        <text class="order_no">订单号：{{order_no}}</text>
+      </view>
+      <view class="pay_status_view">
+        <text class="pay_status">{{status_text}}</text>
+      </view>
+    </view>
+    <view class="thin_line"></view>
+    <block wx:for="{{pro_info}}" wx:for-item="itemPro" wx:key="item">
+      <view class="second_floor" data-orderid="{{order_no}}" data-model="{{pro_info}}" bindtap="detailOrder">
+        <view class="image_view">
+          <image class="pro_image" src="http://www.1psq.cn/{{itemPro.thumb}}"></image>
+        </view>
+        <view class="pro_name_view">
+          <text class="pro_name">{{itemPro.p_name}}</text>
+          <text class="guige">规格：{{itemPro.con_content1 + " " + itemPro.con_content2}}</text>
+        </view>
+      </view>
+      <view class="thin_line"></view>
+    </block>
+    <view class="third_floor">
+      <view class="amount_view">
+        <text class="amount">订单金额：{{amount}}</text>
+      </view>
+      <view class="buttons buttons1">
+        <view class="check_logistics_button_view view1" bindtap="getLogisticInfo" data-postcode="{{post_code}}" data-expressno="{{express_no}}" data-postmode="{{post_mode}}">
+          <text class="check_logistics_button " catchtap="getLogisticInfo" data-postcode="{{post_code}}" data-expressno="{{express_no}}" data-postmode="{{post_mode}}">查看物流</text>
+        </view>
+        <view class="confirm_receive_button_view view1" data-orderid="{{order_id}}" bindtap="confirmOrder">
+          <text class="confirm_receive_button" data-orderid="{{order_id}}" data-orderid1="{{order_no}}" catchtap="confirmOrder">确认收货</text>
+        </view>
+        <view class='view1' catchtap="zitidian">自提点</view>
+        <view class='view1' data-orderid="{{order_no}}" catchtap="zitima">自提码</view>
+      </view>
+    </view>
+  </view>
+  <view class="strong_line"></view>
+</template>
+<!-- 已完成 -->
+<template name="normal_order_info">
+  <view class="order_info">
+    <view class="first_floor" data-orderid="{{order_no}}" data-model="{{pro_info}}" bindtap="detailOrder">
+      <view class="order_no_view">
+        <text class="order_no">订单号：{{order_no}}</text>
+      </view>
+      <view class="pay_status_view">
+        <text class="pay_status">{{status_text}}</text>
+      </view>
+    </view>
+    <view class="thin_line"></view>
+    <block wx:for="{{pro_info}}" wx:for-item="itemPro" wx:key="item">
+      <view class="second_floor" data-orderid="{{order_no}}" data-model="{{pro_info}}" bindtap="detailOrder">
+        <view class="image_view">
+          <image class="pro_image" src="http://www.1psq.cn/{{itemPro.thumb}}"></image>
+        </view>
+        <view class="pro_name_view">
+          <text class="pro_name">{{itemPro.p_name}}</text>
+          <text class="guige">规格：{{itemPro.con_content1 + " " + itemPro.con_content2}}</text>
+        </view>
+      </view>
+      <view class="thin_line"></view>
+    </block>
+    <view class="third_floor">
+      <view class="amount_view">
+        <text class="amount">订单金额：{{amount}}</text>
+      </view>
+      <view wx:if="{{comment}}" class='tj_qinglun' style="background:#999;">
+        已评论
+      </view>
+       <view wx:else class='tj_qinglun' catchtap='tj_pinglun'  data-model="{{pro_info}}" data-orderid="{{order_no}}">
+        添加评价
+      </view>
+    </view>
+  </view>
+  <view class="strong_line"></view>
+</template>
+<!-- 已取消 -->
+<template name="normal_order_info_quxiao">
+  <view class="order_info">
+    <view class="first_floor" data-orderid="{{order_no}}" data-model="{{pro_info}}" bindtap="detailOrder">
+      <view class="order_no_view">
+        <text class="order_no">订单号：{{order_no}}</text>
+      </view>
+      <view class="pay_status_view">
+        <text class="pay_status">{{status_text}}</text>
+      </view>
+    </view>
+    <view class="thin_line"></view>
+    <block wx:for="{{pro_info}}" wx:for-item="itemPro" wx:key="item">
+      <view class="second_floor" data-orderid="{{order_no}}" data-model="{{pro_info}}" bindtap="detailOrder">
+        <view class="image_view">
+          <image class="pro_image" src="http://www.1psq.cn/{{itemPro.thumb}}"></image>
+        </view>
+        <view class="pro_name_view">
+          <text class="pro_name">{{itemPro.p_name}}</text>
+          <text class="guige">规格：{{itemPro.con_content1 + " " + itemPro.con_content2}}</text>
+        </view>
+      </view>
+      <view class="thin_line"></view>
+    </block>
+  </view>
+  <view class="strong_line"></view>
+</template>

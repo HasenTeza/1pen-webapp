@@ -1,0 +1,24 @@
+<view class="my_coupon">
+  <view class='nav'>
+    <text class="text">当前可用的优惠券</text>
+  </view>
+    <view class='ul'>
+      <block wx:for="{{column.column}}" wx:key="item">
+        <view class='li' bindtap='yhq_xuanze' data-column_id="{{item.column_id}}" data-miaoshu="{{item.rule}}" data-money="{{item.money}}">
+          <view class='left'>
+            <text class='title'>{{item.c_name}}</text>
+            <text class='l_text1'>{{item.conditions}}</text>
+            <text class='l_text2'>{{item.rule}}</text>
+          </view>
+          <view class='right'>
+            <text class='r_text'>
+            <text>{{item.money}}</text>元
+            </text>
+            <text class='r_text'>失效时间：{{item.stop_time}}</text>
+          </view>
+        </view>
+      </block>
+    </view>
+    
+ 
+</view>

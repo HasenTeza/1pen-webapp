@@ -1,0 +1,15 @@
+<view class="tuijian">
+  <view class='cnxh_content'>
+
+
+      <block wx:for="{{new_pro_info}}" wx:key="item">
+        <view class='cnxh_list' bindtap="getProDetail"  data-pro_id="{{item.pro_id}}" bindtap='xiangqing'>
+          <image class='cnxh_img' src='http://www.1psq.cn/{{item.thumb}}'></image>
+          <view class='cnxh_text'>{{item.p_name}}</view>
+          <text class='cnxh_jg'>￥{{item.associator_price}}</text>
+        </view>
+      </block>
+     
+
+  </view>
+</view>

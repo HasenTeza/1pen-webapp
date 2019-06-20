@@ -1,0 +1,47 @@
+.zitima {
+  width: 100%;
+  height: 100%;
+}
+
+.title {
+  padding-top: 50rpx;
+  width: 100%;
+  height: 80rpx;
+  font-size: 48rpx;
+  font-weight: 600;
+  line-height: 80rpx;
+  text-align: center;
+  text-indent: 20rpx;
+  color: #ff6b6b;
+}
+
+.ma_ms {
+  width: 80%;
+  margin: 5% 10%;
+  height: 160rpx;
+}
+
+
+.ma_ms text {
+  font-size: 24rpx;
+  color: #999;
+}
+
+.ma {
+  font-size: 48rpx;
+  line-height: 100rpx;
+  text-align: center;
+  /* border: 1rpx solid #ff6b6b; */
+  background-color: #ff6b6b;
+  color: #fff;
+  border-radius: 10rpx;
+}
+
+.erweima {
+  width: 80%;
+  margin: 0 auto;
+}
+
+.erweima image {
+  width: 100%;
+}

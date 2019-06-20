@@ -1,0 +1,65 @@
+<view class="pinglun">
+  <view class='header'>
+    <image class='header_img' src='http://www.1psq.cn/{{url1}}'></image>
+    <view bindtap='s_pingfen' data-aa="1" class='hao'>
+      <image class='hao_img' data-aa="1" src="{{sp_index==1?'/icon/haoping1.png':'/icon/haoping.png'}}"></image>
+      <text data-aa="1" style="color:{{sp_index==1?'#ff6b6b':'#aaa'}}">好评</text>
+    </view>
+    <view bindtap='s_pingfen' data-aa="2" class='hao'>
+      <image data-aa="2" class='hao_img' src="{{sp_index==2?'/icon/zhongping1.png':'/icon/zhongping.png'}}"></image>
+      <text data-aa="2">中评</text>
+    </view>
+    <view bindtap='s_pingfen' data-aa="3" class='hao'>
+      <image data-aa="3" class='hao_img' src="{{sp_index==3?'/icon/chaping1.png':'/icon/chaping.png'}}"></image>
+      <text data-aa="3">差评</text>
+    </view>
+  </view>
+  <view class='inputBox'>
+    <textarea bindinput="bindinput" maxlength="140" placeholder="上身效果怎么样？来张美美的买家秀吧！" placeholder-style="color:#b9b9b9"></textarea>
+    <view class='tj_tupianall'>
+
+      <block wx:for="{{image1}}" wx:key="item">
+        <view class="{{src_status?'tupian_zs1 tupian_zs':'tupian_zs'}}">
+          <image src="{{item}}" catchtap='preview_img'></image>
+        </view>
+      </block>
+      <view class='tj_tupian' catchtap='chooseImg' wx:if="{{imagestatus}}">
+        <image src='/icon/tj_tupian.png' catchtap='chooseImg'></image>
+        <text catchtap='chooseImg'>添加图片</text>
+      </view>
+    </view>
+
+  </view>
+  <view class='niming' bindtap='niming'>
+    <view class='left'>
+      <image src='/icon/xuanzhong.png' src="{{nm_status>=1?'/icon/xuanzhong1.png':'/icon/xuanzhong.png'}}"></image>
+      <text>匿名</text>
+    </view>
+    <view class='right'>
+      你的评价能帮助其他小伙伴呦
+    </view>
+  </view>
+  <view class='dianpu'>
+    <view class='title'>
+      <image src='/icon/dianpu.png'></image>
+      <text>店铺评分</text>
+      <view class='xingxing'>
+        <image bindtap='x_pingfen' data-index="1" src="{{pf_index>=1?'/icon/xing1.png':'/icon/xing4.png'}}" class='xing'></image>
+        <image bindtap='x_pingfen' data-index="2" src="{{pf_index>=2?'/icon/xing1.png':'/icon/xing4.png'}}" class='xing'></image>
+        <image bindtap='x_pingfen' data-index="3" src="{{pf_index>=3?'/icon/xing1.png':'/icon/xing4.png'}}" class='xing'></image>
+        <image bindtap='x_pingfen' data-index="4" src="{{pf_index>=4?'/icon/xing1.png':'/icon/xing4.png'}}" class='xing'></image>
+        <image bindtap='x_pingfen' data-index="5" src="{{pf_index>=5?'/icon/xing1.png':'/icon/xing4.png'}}" class='xing'></image>
+      </view>
+    </view>
+  </view>
+
+  <view class='btn' bindtap='btn'>发表评论</view>
+  <!-- <button bindtap='chooseImg'>选择图片</button> -->
+    <!-- <block wx:for="{{image1}}" wx:key="item">
+  <image src='{{item}}' bindtap='preview_img'></image>
+</block>
+</view>
+ 
+<button bindtap='up_img'>上传</button> -->
+  <!-- </view> -->
+</view>

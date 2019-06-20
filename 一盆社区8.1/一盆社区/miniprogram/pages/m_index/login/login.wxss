@@ -1,0 +1,64 @@
+/* pages/login/login.wxss */
+.head{
+  width: 188rpx;
+  height: 188rpx;
+  margin: 0 auto;
+  padding-top: 100rpx;
+}
+.head_img{
+  width: 188rpx;
+  height: 188rpx;
+  border-radius: 50%;
+}
+.content{
+  width: 80%;
+  margin: 120rpx auto;
+}
+.input{
+  width: 100%;
+  height: 142rpx;
+  border-bottom: 2rpx solid #d4d4d4;
+  line-height: 142rpx;
+  font-size: 32rpx;
+  position: relative;
+}
+.input .yzm1{
+  color: #ccc;
+ border:1rpx solid #ccc;
+}
+.yzm{
+  position: absolute;
+  right: 2rpx;
+  top: 50rpx;
+  color: #fd6f6e;
+  border: 1rpx solid  #fd6f6e;
+  width: 170rpx;
+  height: 50rpx;
+  text-align: center;
+  line-height: 50rpx;
+  font-size: 24rpx;
+  border-radius: 10rpx;
+
+
+}
+.input text{
+  margin-left: 20rpx; 
+  float: left;
+  font-size: 32rpx;
+}
+.input input{
+  float: left;
+  height: 142rpx;
+  line-height: 142rpx;
+  margin-left: 20rpx; 
+}
+.btn{
+  width: 80%;
+  height: 110rpx;
+  background-color: #fd6f6e;
+  margin: 0 auto;
+  border-radius: 20rpx;
+  text-align: center;
+  line-height: 110rpx;
+  color: #fff;
+}

@@ -1,0 +1,293 @@
+<!--index.wxml-->
+<view class='veiwBox'>
+<button open-type='share' class='share'>分享</button>
+  <!-- 搜索 -->
+  <view class='searchBox' bindtap='search'>
+    <view class='search'>
+      <icon class="searchcion" size='14' type='search'></icon>
+      <text class='searchtext'>搜索商品</text>
+    </view>
+  </view>
+
+  <!-- 首页主体 -->
+  <view class="content">
+    <!-- //banner
+        //nav
+        //缴费
+        // 当前应缴信息
+        //历史缴费信息   -->
+    <!-- <view></view> -->
+    <view class='banner'>
+      <swiper indicator-dots="true" autoplay="true" interval="2000" duration="500" circular="true">
+
+        <block wx:for="{{bannerImgs}}" wx:for-item="item" wx:key="pro" wx:for-index = "index">
+          <swiper-item>
+            <view class='img'>
+              <image src="http://www.1psq.cn/{{item.image}}" class="first_swiper-item" data-rout_xcx="{{item.rout_xcx}}" bindtap='image_btn'></image>
+            </view>
+          </swiper-item>
+        </block>
+      </swiper>
+    </view>
+    <view class='nav'>
+      <view class='nav_list' bindtap='baoxiu'>
+        <image src='../../imgs/nav_baoxiu.png'></image>
+        <text>报修</text>
+      </view>
+      <view class='nav_list' bindtap='gonggao'>
+        <image src='../../imgs/nav_gonggao.png'></image>
+        <text>公告</text>
+      </view>
+      <view class='nav_list' bindtap='baojie'>
+        <image src='../../imgs/nav_baojie.png'></image>
+        <text>保洁</text>
+      </view>
+      <view class='nav_list' bindtap='jiaofei'>
+        <image src='../../imgs/nav_jiaofei.png'></image>
+        <text>缴费</text>
+      </view>
+      <view class='nav_list' bindtap='pintuan'>
+        <image src='../../imgs/nav_pintuan.png'></image>
+        <text>拼团</text>
+      </view>
+      <view class='nav_list' bindtap='tuijian'>
+        <image src='../../imgs/nav_tuijian.png'></image>
+        <text>推荐</text>
+      </view>
+      <view class='nav_list' bindtap='zitiye'>
+        <image src='../../imgs/nav_zitidian.png'></image>
+        <text>自提点</text>
+      </view>
+      <view class='nav_list' bindtap='youhuiquan'>
+        <image src='../../imgs/nav_youhuiquan.png'></image>
+        <text>优惠券</text>
+      </view>
+    </view>
+
+
+    <!-- 公告 -->
+    <view class="gonggao">
+      <image src="/icon/101.png" class="gonggao-image" />
+      <swiper class="gonggao-text" autoplay="true" interval="3000" circular="true" vertical="true">
+        <block wx:for="{{gonggao}}" wx:key="item">
+          <swiper-item class="gonggao-view" bindtap="ToGongGao" data-proid="{{item.id}}">
+            <view class="gonggao-text-view">
+              <text class="gonggao-text1">{{item.title}}</text>
+              <text class="gonggao-text1">{{item.create_time}}</text>
+            </view>
+            <image src="http://www.1psq.cn/{{item.img1}}" class="gonggao-image1" />
+          </swiper-item>
+        </block>
+      </swiper>
+    </view>
+    <!-- 登陆 -->
+    <!-- <view class='neirong'>
+      <view class='jiaofei' wx:if="{{login_}}">
+        <view>待缴费（元）</view>
+        <view>{{zonge_assessment}}</view>
+        <view class='jf_btn'>
+          <text>立即缴费</text>
+          <text bindtap='tj_fenqi'>我要分期</text>
+        </view>
+      </view>
+      <view class='jiaofei jiaofei1' wx:else>
+        <view>绑定手机号获取缴费信息</view>
+        <view bindtap='index_login'>请登录</view>
+      </view>
+
+      <view class='lists dangqian_jiaofei'>
+        <text style='color:#79a6e7'>当前应缴费</text>
+
+        <block wx:for="{{dangqian_}}" wx:for-item="item" wx:key="pro1">
+          <view class='list'>
+            <view class='list_nr'>
+              <text>波普中心（{{item.start_time}}至{{item.stop_time}}）</text>
+              <text>地址：{{item.area_name}}{{item.unit}}单元{{item.floor}}楼{{item.room}}室</text>
+              <text>业主：{{item.truename}}</text>
+              <text>面积：{{item.area}}平方</text>
+              <text>代缴金额：{{item.assessment}} 元</text>
+            </view>
+          </view>
+        </block>
+      </view>
+      <view class='lists lishi_jiaofei'>
+        <text>历史欠缴费</text>
+        <block wx:for="{{dangqian_}}" wx:for-item="item" wx:key="pro1">
+          <view class='list'>
+            <view class='list_nr'>
+              <text>波普中心（{{item.start_time}}至{{item.stop_time}}）</text>
+              <text>地址：{{item.area_name}}{{item.unit}}单元{{item.floor}}楼{{item.room}}室</text>
+              <text>业主：{{item.truename}}</text>
+              <text>面积：{{item.area}}平方</text>
+              <text>代缴金额：{{item.assessment}} 元</text>
+            </view>
+          </view>
+        </block>
+
+      </view>
+    </view> -->
+
+
+    <!-- //拼团 -->
+    <view class='pintuan'>
+      <view class='title'>
+        <text class='text1'>拼团商品</text>
+        <text class='text2'>一起拼团最划算</text>
+        <text class='text3' bindtap='pintuan'>更多>></text>
+      </view>
+      <scroll-view class='pt_content' scroll-x>
+        <block wx:for="{{pintuan_data}}" wx:key="item">
+          <view class='pt_list' bindtap='getProDetail_pin' data-proid="{{item.pro_id}}">
+            <image class='pt_img' src='http://www.1psq.cn/{{item.thumb}}'></image>
+            <text class='yituan'>{{item.pintuan_count}}人团</text>
+            <text class='jiage'>￥{{item.pintuan_price}}</text>
+          </view>
+        </block>
+      </scroll-view>
+    </view>
+    <!-- 推荐商品 -->
+    <view class='tuijian'>
+      <view class='title'>
+        <text class='text1'>推荐商品</text>
+        <text class='text2'>每日推荐最新商品</text>
+        <text class='text3' bindtap='tuijian'>更多>></text>
+      </view>
+      <view class='tj_content'>
+        <image class='tj_img' src='http://www.1psq.cn/{{p_banner}}' mode="widthFix"></image>
+
+        <scroll-view class='tj_list1' scroll-x bindscroll="scroll">
+          <view class='tj_list'>
+            <block wx:for="{{recommend_info}}" wx:key="item">
+              <view class='list_box' bindtap="getProDetail" data-proid="{{item.pro_id}}">
+                <image class='tj_list_img' src='http://www.1psq.cn/{{item.thumb}}'></image>
+                <view class='tj_miaoshu'>{{item.p_name}}</view>
+                <view class='tj_jiage'>
+                  <view class='xj'>￥{{item.associator_price}}</view>
+                  <!-- <view class='yj'>￥{{item.original_price}}</view> -->
+                </view>
+              </view>
+            </block>
+
+          </view>
+        </scroll-view>
+      </view>
+    </view>
+    <view class='cnxh'>
+      <view class='title'>
+        <text class='text1'>猜你喜欢</text>
+        <text class='text2'>每日推荐你最喜欢</text>
+        <text class='text3'>更多>></text>
+      </view>
+      <view class='cnxh_content'>
+
+
+        <block wx:for="{{new_pro_info}}" wx:key="item">
+          <block wx:for="{{item}}" wx:for-item="itemName" wx:key="item1">
+            <view class='cnxh_list' bindtap="getProDetail" data-proid="{{itemName.pro_id}}">
+              <image class='cnxh_img' src='http://www.1psq.cn/{{itemName.thumb}}'></image>
+              <view class='cnxh_text'>{{itemName.p_name}}</view>
+              <text class='cnxh_jg'>￥{{itemName.associator_price}}</text>
+            </view>
+          </block>
+        </block>
+
+      </view>
+    </view>
+
+    <!-- 推荐好店 -->
+    <!-- <view class='dianpu'>
+      <view class='title'>
+        <text class='text1'>推荐好店</text>
+        <text class='text2'>每日推荐精选店铺</text>
+        <text class='text3'>更多>></text>
+      </view>
+      <view class='dp_content clearfloat'>
+          <view class='dp_box'>
+            <view class='dp_box_title'>
+              <view class='dp_box_title_t1'>
+                <image src='/icon/101.png'></image>
+              </view>
+              <view class='dp_box_title_t2'>
+                <text>一盆鲜果</text>
+                <text>企业认证</text>
+                <text>担保交易</text>
+              </view>
+              <view class='dp_box_title_t3'>
+                <view>距离：≤500米</view>
+                <view>进入店铺</view>
+              </view>
+            </view>
+            <view class='dp_box_content'>
+              <view>
+                <image src='/icon/101.png'></image>
+              </view>
+              <view>
+                <image src='/icon/101.png'></image>
+              </view>
+              <view>
+                <image src='/icon/101.png'></image>
+              </view>
+            </view>
+          </view>
+      </view>
+      <view class='dp_content clearfloat'>
+          <view class='dp_box'>
+            <view class='dp_box_title'>
+              <view class='dp_box_title_t1'>
+                <image src='/icon/101.png'></image>
+              </view>
+              <view class='dp_box_title_t2'>
+                <text>一盆鲜果</text>
+                <text>企业认证</text>
+                <text>担保交易</text>
+              </view>
+              <view class='dp_box_title_t3'>
+                <view>距离：≤500米</view>
+                <view>进入店铺</view>
+              </view>
+            </view>
+            <view class='dp_box_content'>
+              <view>
+                <image src='/icon/101.png'></image>
+              </view>
+              <view>
+                <image src='/icon/101.png'></image>
+              </view>
+              <view>
+                <image src='/icon/101.png'></image>
+              </view>
+            </view>
+          </view>
+      </view>
+      <view class='dp_content clearfloat'>
+          <view class='dp_box'>
+            <view class='dp_box_title'>
+              <view class='dp_box_title_t1'>
+                <image src='/icon/101.png'></image>
+              </view>
+              <view class='dp_box_title_t2'>
+                <text>一盆鲜果</text>
+                <text>企业认证</text>
+                <text>担保交易</text>
+              </view>
+              <view class='dp_box_title_t3'>
+                <view>距离：≤500米</view>
+                <view>进入店铺</view>
+              </view>
+            </view>
+            <view class='dp_box_content'>
+              <view>
+                <image src='/icon/101.png'></image>
+              </view>
+              <view>
+                <image src='/icon/101.png'></image>
+              </view>
+              <view>
+                <image src='/icon/101.png'></image>
+              </view>
+            </view>
+          </view>
+      </view>
+    </view> -->
+  </view>
+</view>

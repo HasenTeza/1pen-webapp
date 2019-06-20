@@ -1,0 +1,8 @@
+<view class="zitima">
+  <view class='title'>一盆鲜果</view>
+  <view class='ma_ms'>
+    <text class='ms'>商品自提码:</text>
+    <view class='ma'>{{zitima}}</view>
+  </view>
+
+</view>

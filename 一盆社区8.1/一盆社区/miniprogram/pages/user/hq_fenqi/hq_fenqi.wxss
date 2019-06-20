@@ -1,0 +1,48 @@
+.hq_fenqi{
+  width: 100%;
+  height: 100%;
+  background-color: #d9ebe8;
+  border-top: 1rpx solid #d9ebe8;
+}
+.box{
+  width: 100%;
+  margin: 20rpx 0;
+  background-color: #fff;
+}
+.header{
+  width: 100%;
+  height: 100rpx;
+  background-color: #fff;
+}
+.img{
+  float: left;
+  width: 80rpx;
+  height: 80rpx;
+  /* background-color: goldenrod; */
+  margin: 10rpx;
+  border-radius: 50%;
+}
+.userName{
+  float: left;
+  text-align: left;
+  font-size: 24rpx;
+  line-height: 100rpx;
+  text-indent: 20rpx;
+}
+.h1{
+  margin: 0 1% ;
+  width: 98%;
+  height: 100rpx;
+  border-top: 5rpx solid #d9ebe8;
+  background-color: #fff;
+  line-height: 100rpx;
+  font-size: 28rpx;
+  text-indent: 10rpx;
+}
+.left{
+  float: left;
+}
+.right{
+  float: right;
+  margin-right: 10rpx;
+}

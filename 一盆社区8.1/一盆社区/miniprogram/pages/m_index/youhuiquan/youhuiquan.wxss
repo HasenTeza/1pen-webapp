@@ -1,0 +1,74 @@
+.youhuiquan{
+  width: 100%;
+  min-height: 100%;
+  background-color: #ef404d;
+}
+.ul{
+  width: 90%;
+  padding: 5%;
+}
+.li{
+  width: 100%;
+  /* padding: 10rpx 0; */
+  margin-bottom: 20rpx;
+  height: 160rpx;
+  background-color: #fff;
+  border-radius: 20rpx;
+}
+.text1{
+  width: 27%;
+  padding: 0 1%;
+  height: 100%;
+  float: left;
+  font-size: 24rpx;
+  text-align: center;
+  line-height: 160rpx;
+  color: #ef404d;
+}
+.text1 text{
+  font-size: 42rpx;
+  font-weight: 600;
+}
+.text2{
+  width: 45%;
+  padding-left:1%;
+  height: 100%;
+  float: left;
+}
+.text2 .title{
+  display: block;
+  width: 100%;
+  height: 80rpx;
+  font-size: 32rpx;
+  line-height: 80rpx;
+  word-break: break-all;
+  display: -webkit-box;
+  -webkit-box-orient: vertical;
+  -webkit-line-clamp: 1;
+  overflow: hidden;
+}
+.text2 .t1{
+  display: block;
+  width: 100%;
+  height: 30rpx;
+  font-size: 18rpx;
+  line-height: 30rpx;
+}
+.text3{
+  width: 20%;
+  padding: 0 2.5%;
+  height: 100%;
+  float: left;
+}
+.text3 text{
+  display: block;
+  width: 100%;
+  height: 60rpx;
+  background-color: #ef404d;
+  border-radius: 10rpx;
+  font-size: 24rpx;
+  line-height: 60rpx;
+  text-align: center;
+  margin-top: 77rpx;
+  color: #fff;
+}

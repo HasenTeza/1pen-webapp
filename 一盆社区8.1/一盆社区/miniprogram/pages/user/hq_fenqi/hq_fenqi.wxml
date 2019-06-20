@@ -1,0 +1,24 @@
+<view class='hq_fenqi'>
+  <view class='box'>
+    <view class='header'>
+      <image class='img' src='{{user.avatarUrl}}'></image>
+      <view class='userName'>{{user.nickName}}</view>
+    </view>
+    <view class='h1'>
+      <view class='left'>申请时间</view>
+      <view class='right'>{{list.start_time}}</view>
+    </view>
+    <view class='h1'>
+      <view class='left'>申请电话</view>
+      <view class='right'>{{list.phone}}</view>
+    </view>
+    <view class='h1'>
+      <view class='left'>申请人</view>
+      <view class='right'>{{list.turename}}</view>
+    </view>
+    <view class='h1'>
+      <view class='left'>状态</view>
+      <view class='right' style='color:#b1bab9'>业务受理中</view>
+    </view>
+  </view>
+</view>

@@ -1,0 +1,123 @@
+/* pages/jiaofei/jiaofei.wxss */
+/* 主题内容 */
+
+.neirong {
+  width: 100%;
+  display: flex;
+  flex-direction: row;
+  flex-wrap: wrap;
+  justify-content: center;
+  background-color: #f4f3f8;
+}
+
+/* 缴费 */
+
+.jiaofei {
+  width: 88%;
+  height: 400rpx;
+  margin: 40rpx 6%;
+  border-radius: 20rpx;
+  background-image: url(http://www.1psq.cn/xcx_img/3.png);
+  background-position: -120rpx -20rpx;
+  background-size: 140% 120%;
+  font-size: 32rpx;
+  color: #fff;
+  text-align: center;
+}
+
+.neirong  .jiaofei1 view:nth-child(1) {
+  padding-top: 150rpx;
+  font-size: 24rpx;
+  line-height: 24rpx;
+  text-align: center;
+}
+
+.neirong  .jiaofei1 view:nth-child(2) {
+  width: 200rpx;
+  height: 80rpx;
+  margin: 0 auto;
+  text-align: center;
+  border: 3rpx solid #ccc;
+  border-radius: 10rpx;
+  font-size: 32rpx;
+  font-weight: none;
+  line-height: 80rpx;
+}
+
+.jiaofei view:nth-child(1) {
+  height: 80rpx;
+  line-height: 80rpx;
+  padding-top: 46rpx;
+}
+
+.jiaofei view:nth-child(2) {
+  height: 140rpx;
+  font-size: 60rpx;
+  font-weight: bold;
+  line-height: 140rpx;
+}
+
+.jiaofei view:nth-child(3) {
+  width: 100%;
+  height: 74rpx;
+}
+
+.jiaofei view:nth-child(3) text {
+  float: left;
+  margin-left: 16%;
+  width: 25%;
+  height: 70rpx;
+  line-height: 70rpx;
+  font-size: 28rpx;
+  border: 2rpx solid #f8f5cc;
+  border-radius: 20rpx;
+}
+
+/* 当前和历史缴费 */
+
+.lists {
+  width: 100%;
+  display: flex;
+  flex-direction: row;
+  flex-wrap: wrap;
+  justify-content: center;
+}
+
+/* 单个list */
+
+.list {
+  width: 88%;
+  height: 298rpx;
+  margin: 40rpx 0;
+  background-color: #5896fd;
+  border-radius: 20rpx;
+}
+
+.lishi_jiaofei .list {
+  background-color: #ff7600;
+}
+
+.list_nr {
+  width: 90%;
+  height: 80%;
+  padding: 5% 0;
+  margin: 0 auto;
+  background-color: #fff;
+}
+
+.list_nr text {
+  display: block;
+  padding: 10rpx 0;
+  padding-left: 37rpx;
+  width: 100%;
+  height: 24rpx;
+  line-height: 24rpx;
+  font-size: 24rpx;
+}
+
+.img {
+  width: 100%;
+  height: 100%;
+  text-align: center;
+  line-height: 150rpx;
+}

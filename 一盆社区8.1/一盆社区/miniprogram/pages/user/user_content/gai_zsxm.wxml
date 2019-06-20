@@ -1,0 +1,6 @@
+<view class='xiugai'>
+<view class='input'>
+  <input placeholder-class="placeHolderSty"placeholder="{{truename}}" bindblur="mobileInput"bindinput='mobileInput' />
+</view>
+  <view class='btn' bindtap='btn'>确认修改</view>
+</view>

@@ -1,0 +1,8 @@
+/* pages/m_index/index_nav/index_nav1.wxss */
+.index_nav1{
+  width: 100%;
+  height: 100%;
+  background-image: url(http://www.1psq.cn/xcx_img/10.jpg);
+  background-repeat: no-repeat;
+  background-size: 100% 100%;
+}

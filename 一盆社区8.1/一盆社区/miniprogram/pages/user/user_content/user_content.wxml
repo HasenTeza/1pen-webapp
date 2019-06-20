@@ -1,0 +1,74 @@
+<view class="user_content">
+  <view class='touxiang'>
+    <view class='left'>
+      <image class='left_img' src='../../../imgs/user_touxiang.png'></image>
+      <view class='left_text'>头像</view>
+    </view>
+    <view class='right'>
+      <image class='user_img' src='{{avatarUrl}}'></image>
+    </view>
+  </view>
+
+  <view class='h1'>
+    <view class='left'>
+      <image class='left_img' src='../../../imgs/user_nicheng.png'></image>
+      <view class='left_text'>昵称</view>
+    </view>
+    <view class='right'>
+      <view class='text'>{{nickName}}</view>
+      <image class='user_img' src='../../../imgs/jiaobao.png'></image>
+    </view>
+  </view>
+  
+  <view class='h1'>
+    <view class='left'>
+      <image class='left_img' src='../../../imgs/user_shouji.png'></image>
+      <view class='left_text'>手机号</view>
+    </view>
+    <view class='right'>
+      <view class='text'>{{telephone}}</view>
+      <image class='user_img' src='../../../imgs/jiaobao.png'></image>
+    </view>
+  </view>
+  
+  <view class='h1'  bindtap='gai_zsxm'>
+    <view class='left'>
+      <image class='left_img' src='../../../imgs/user_name.png'></image>
+      <view class='left_text'>真实姓名</view>
+    </view>
+    <view class='right'>
+      <view class='text'>{{truename}}</view>
+      <image class='user_img' src='../../../imgs/jiaobao.png'></image>
+    </view>
+  </view>
+  
+  <view class='h1 h2'>
+    <view class='left'>
+      <image class='left_img' src='../../../imgs/user_haoqing.png'></image>
+      <view class='left_text'>去好评</view>
+    </view>
+    <view class='right'>
+      <image class='user_img' src='../../../imgs/jiaobao.png'></image>
+    </view>
+  </view>
+  
+  <view class='h1'>
+    <view class='left'>
+      <image class='left_img' src='../../../imgs/user_tuijian.png'></image>
+      <view class='left_text'>推荐给朋友</view>
+    </view>
+    <view class='right'>
+      <image class='user_img' src='../../../imgs/jiaobao.png'></image>
+    </view>
+  </view>
+  
+  <view class='h1'>
+    <view class='left'>
+      <image class='left_img' src='../../../imgs/user_women.png'></image>
+      <view class='left_text'>关于我们</view>
+    </view>
+    <view class='right'>
+      <image class='user_img' src='../../../imgs/jiaobao.png'></image>
+    </view>
+  </view>
+</view>

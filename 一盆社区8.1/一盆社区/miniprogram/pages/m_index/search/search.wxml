@@ -1,0 +1,42 @@
+<view>
+  <view class='searchBox'>
+    <view class='search'>
+      <icon class="searchcion" size='20' type='search'></icon>
+      <input type='text' bindinput='bindinput' focus="focus" class="searchInput" placeholder="请输入关键字" value="{{djsp_name}}" />
+    </view>
+  </view>
+  <view wx:if="{{state}}">
+    <view class='zuijin'>
+      <view class='header'>最近搜索</view>
+      <view class='content'>
+        <block wx:for="{{zuijin}}" wx:key="item">
+          <text data-word='{{item.words}}' bindtap='sousuoClick'>{{item.words}}</text>
+        </block>
+      </view>
+    </view>
+    <view class='remen' wx:if="{{state}}">
+      <view class='header'>热门搜索</view>
+      <view class='content'>
+        <block wx:for="{{reci}}" wx:key="item">
+          <text data-word='{{item.word}}' bindtap='sousuoClick'>{{item.word}}</text>
+        </block>
+      </view>
+    </view>
+  </view>
+
+  <block wx:for="{{shangpin}}" wx:key="item">
+    <view class='shangpin' data-pro_id="{{item.pro_id}}" bindtap='sp_xiangqing'>
+      <view class='s_left'>
+        <image src='http://www.1psq.cn/{{item.thumb}}' class='s_img'></image>
+      </view>
+      <view class='s_right'>
+        <text class='title'>{{item.p_name}}</text>
+        <view class='text'>
+          <text>￥{{item.associator_price}}</text>
+          <text>￥{{item.original_price}}</text>
+        </view>
+      </view>
+    </view>
+  </block>
+
+</view>

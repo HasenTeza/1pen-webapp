@@ -1,0 +1,6 @@
+{
+  "navigationBarBackgroundColor": "#ff6b6b",
+  "navigationBarTitleText": "拼团商品",
+  "enablePullDownRefresh": true,
+  "onReachBottomDistance": 50
+}

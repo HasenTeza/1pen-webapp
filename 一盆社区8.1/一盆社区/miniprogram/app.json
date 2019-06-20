@@ -1,0 +1,87 @@
+{
+  "pages": [
+    "pages/m_index/index",
+    "pages/m_index/pintuan/pintuan",
+    "pages/m_index/tuijian/tuijian",
+    "pages/m_index/youhuiquan/youhuiquan",
+    "pages/yhq_zhifu/yhq_zhifu",
+    "pages/m_index/search/search",
+    "pages/m_index/tj_fenqi/tj_fenqi",
+    "pages/m_index/login/login",
+    "pages/m_index/baojie/index_nav3",
+    "pages/m_index/index_nav/index_nav2",
+    "pages/m_index/index_nav/index_nav1",
+    "pages/m_index/add_bj/add_bj",
+    "pages/ziti/zitima/zitima",
+    "pages/ziti/zitidian/zitidian",
+    "pages/first/first",
+    "pages/share/share",
+    "pages/category/category",
+    "pages/confirm_order/confirm_order",
+    "pages/confirm_order1/confirm_order",
+    "pages/user/user",
+    "pages/user/my_coupon/my_coupon",
+    "pages/user/hq_fenqi/hq_fenqi",
+    "pages/user/user_content/user_content",
+    "pages/user/user_content/gai_zsxm",
+    "pages/shoppingCart/shoppingcart",
+    "pages/pro_detail/pro_detail",
+    "pages/pro_detail1/pro_detail",
+    "pages/after_pay/after_pay",
+    "pages/after_pay/after_pay1",
+    "pages/address/address",
+    "pages/address/address1",
+    "pages/address/new_address/new_address",
+    "pages/address/edit_address/edit_address",
+    "pages/orders/myorder",
+    "pages/orders1/myorder",
+    "pages/orders_pl/orders_pl",
+    "pages/acode/acode",
+    "pages/orders_detail/orders_detail",
+    "pages/orders_detail1/orders_detail",
+    "pages/income/income",
+    "pages/bj_dingdan/bj_dingdan",
+    "pages/rec_orders/order",
+    "pages/group_pro_detail/pro_detail",
+    "pages/gonggao_detail/gonggao_detail",
+    "pages/jiaofei/jiaofei_place/jiaofei_place",
+    "pages/jiaofei/jiaofei"
+  ],
+  "window": {
+    "backgroundColor": "#F6F6F6",
+    "backgroundTextStyle": "light",
+    "navigationBarBackgroundColor": "#F6F6F6",
+    "navigationBarTitleText": "一盆社区",
+    "navigationBarTextStyle": "black"
+  },
+  "tabBar": {
+    "selectedColor": "#ff6b6b",
+    "list": [
+      {
+        "pagePath": "pages/m_index/index",
+        "text": "首页",
+        "iconPath": "imgs/shouye.png",
+        "selectedIconPath": "imgs/shouye2.png"
+      },
+      {
+        "pagePath": "pages/category/category",
+        "text": "分类",
+        "iconPath": "imgs/fenlei.png",
+        "selectedIconPath": "imgs/fenlei2.png"
+      },
+      {
+        "pagePath": "pages/shoppingCart/shoppingcart",
+        "text": "购物车",
+        "iconPath": "imgs/gouwuche.png",
+        "selectedIconPath": "imgs/gouwuche2.png"
+      },
+      {
+        "pagePath": "pages/user/user",
+        "text": "我的",
+        "iconPath": "imgs/wode.png",
+        "selectedIconPath": "imgs/wode2.png"
+      }
+    ]
+  },
+  "sitemapLocation": "sitemap.json"
+}

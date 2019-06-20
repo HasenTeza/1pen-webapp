@@ -1,0 +1,32 @@
+/* pages/m_index/index_nav/index_nav3.wxss */
+
+.index_nav3 {
+  width: 100%;
+  height: 300%;
+  background-image: url(http://www.1psq.cn//xcx_img/12.jpg);
+  background-repeat: no-repeat;
+  background-size: 100% 100%;
+  margin-bottom: 120rpx;
+  position: relative;
+}
+
+.div {
+  position: fixed;
+  left: 0;
+  bottom: 0;
+  width: 100%;
+  height: 140rpx;
+  font-size: 32rpx;
+  line-height: 100rpx;
+  text-align: center;
+  color: #fff;
+  background-color: #fff;
+}
+
+.btn {
+  margin: 20rpx auto;
+  width: 80%;
+  height: 100rpx;
+  background-color: #ff6b6b;
+  border-radius: 10rpx;
+}

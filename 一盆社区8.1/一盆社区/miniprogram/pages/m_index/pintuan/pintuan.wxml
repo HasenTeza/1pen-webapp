@@ -1,0 +1,26 @@
+<view class="tuijian">
+  <view class='ul'>
+    <block wx:for="{{pintuan_data}}" wx:key="item">
+      <view class='li'>
+        <view class='left'>
+          <image src="http://www.1psq.cn/{{item.thumb}}"></image>
+        </view>
+        <view class='right'>
+          <view class='title'>{{item.p_name}}</view>
+          <view class='jiage'>
+            <text class='text1'>￥{{item.pintuan_price}}</text>
+            <text class='text2'>￥{{item.associator_price}}</text>
+          </view>
+          <view class='tuan'>
+            <text class='t_text1'>{{item.pintuan_count}}人团</text>
+            <text class='t_text2' data-pro_id="{{item.pro_id}}" bindtap='pintuan_'>立即拼团</text>
+          </view>
+        </view>
+      </view>
+
+    </block>
+
+  
+
+  </view>
+</view>

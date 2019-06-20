@@ -1,0 +1,35 @@
+<view class='neirong'>
+  <view wx:if="{{dangqian_}}" class='lists dangqian_jiaofei'>
+    <text style='color:#79a6e7'>当前应缴费</text>
+
+    <block wx:for="{{dangqian_}}" wx:for-item="item" wx:key="pro1">
+      <view data-item="{{item}}" class='list' bindtap="jiaofeiPay">
+        <view class='list_nr'>
+          <text>{{item.community_name}}（{{item.start_time}}至{{item.stop_time}}）</text>
+          <text>地址：{{item.area_name}}{{item.unit}}单元{{item.floor}}楼{{item.room}}室</text>
+          <text>业主：{{item.user_name}}</text>
+          <text>面积：{{item.area}}平方</text>
+          <text>缴费类型：{{item.project_name}}</text>
+          <text>代缴金额：{{item.assessment}} 元</text>
+        </view>
+      </view>
+    </block>
+  </view>
+
+  <view wx:if="{{lishi_}}" class='lists lishi_jiaofei'>
+    <text>历史欠缴费</text>
+    <block wx:for="{{lishi_}}" wx:for-item="item" wx:key="pro1">
+      <view class='list'>
+        <view class='list_nr'>
+          <text>{{item.community_name}}（{{item.start_time}}至{{item.stop_time}}）</text>
+          <text>地址：{{item.area_name}}{{item.unit}}单元{{item.floor}}楼{{item.room}}室</text>
+          <text>业主：{{item.truename}}</text>
+          <text>面积：{{item.area}}平方</text>
+          <text>缴费类型：{{item.project_name}}</text>
+          <text>代缴金额：{{item.assessment}} 元</text>
+        </view>
+      </view>
+    </block>
+
+  </view>
+</view>

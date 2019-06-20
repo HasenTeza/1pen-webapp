@@ -1,0 +1,34 @@
+<view class='bj_dingdan'>
+
+  <block wx:for="{{bj_dingdan}}" wx:key="item">
+    <view class='list'>
+      <view class='head'> 
+        <view class='head_left'>{{item.type_text}} {{item.quantity_text}} 清洁剂数量：{{item.cleaning_agent_count}}</view>
+        <view class='head_right'>{{item.create_time}}</view>
+      </view>
+      <view class='content'>{{item.order_status}}：{{item.amount}}元</view>
+      <view class='footer'>
+        <text>{{item.mobile}}</text>
+        <text>{{item.address}}</text>
+      </view>
+    </view>
+
+  </block>
+
+
+
+
+
+
+  <!-- <view class='list'>
+    <view class='head'>
+      <view class='head_left'>按时收费 5小时 清洁剂数量：5</view>
+      <view class='head_right'>2018-11-02 18:21:00</view>
+    </view>
+    <view class='content'>待付款：225.00元</view>
+    <view class='footer'>
+      <text>11111111111</text>
+      <text>北京市省的浪费口水都喷附近</text>
+    </view>
+  </view> -->
+</view>

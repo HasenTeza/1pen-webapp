@@ -1,0 +1,41 @@
+<view class="youhuiquan">
+  <view class='ul'>
+
+    <block wx:for="{{youhuiquan}}" wx:key="item">
+      <view class='li'>
+        <view class='text1'>
+          ￥
+          <text>{{item.money}}</text>
+        </view>
+        <view class='text2'>
+          <text class='title'>{{item.c_name}}</text>
+          <text class='t1'>·\t{{item.conditions}}</text>
+          <text class='t1'>·\t截至时间{{item.stop_time}}</text>
+        </view>
+        <view class='text3' data-cou_id="{{item.cou_id}}" bindtap='cou_id'>
+          <text wx:if="{{item.sf_ling===0}}">领取</text>
+          <text wx:elif="{{item.sf_ling===1}}" style='background:#999'>已领取</text>
+        </view>
+      </view>
+
+    </block>
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+  </view>
+</view>

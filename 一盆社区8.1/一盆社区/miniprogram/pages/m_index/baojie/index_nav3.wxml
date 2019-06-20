@@ -1,0 +1,5 @@
+<view class="index_nav3">
+    <view class='div' bindtap='baojie'>
+        <view class='btn'>立即预约</view>
+    </view>
+</view>

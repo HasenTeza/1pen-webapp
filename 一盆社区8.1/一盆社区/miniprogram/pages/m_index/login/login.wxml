@@ -1,0 +1,20 @@
+<view>
+
+  <view class='head'>
+    <image class='head_img' src='../../../imgs/logo.jpg'></image>
+  </view>
+  <view class='content'>
+    <view class='input'>
+      <text>手机号</text>
+      <input placeholder="请输入手机号" bindinput='input_t'  value=''/>
+    </view>
+    <view class='input'>
+      <text>验证码</text>
+      <input placeholder="请输入验证码"  bindinput='input_yzm'/>
+      <!-- <button class='yzm'  bindtap='huoqu_yzm' wx:if="{{yzm}}" >获取验证码</button> -->
+      <view class='yzm' bindtap='huoqu_yzm' wx:if="{{yzm}}" >获取验证码</view>
+      <view class='yzm yzm1' wx:elif="{{yzm1}}">{{index}}s重新获取</view>
+    </view>
+  </view>
+  <view class='btn' bindtap='login'>登录</view>
+</view>

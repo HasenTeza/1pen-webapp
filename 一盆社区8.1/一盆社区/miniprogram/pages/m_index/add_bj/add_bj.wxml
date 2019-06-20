@@ -1,0 +1,194 @@
+<view class="add_bj">
+
+
+  <view class='user_xx' catchtap="choose_address">
+    <view class='xian'>
+      <image src='/pics/icons/xian.png'></image>
+    </view>
+    <view class='left'>
+      <image src='/pics/icons/address.png'></image>
+    </view>
+
+    <view class='content content1' wx:if="{{showAddress}}" catchtap="choose_address">
+      <text>{{cart_info.address_info.address}}</text>
+      <text>{{cart_info.address_info.mobile}}</text>
+    </view>
+    <view class='content' wx:elif="{{!showAddress}}">
+      <text style='line-height:110rpx;font-size:32rpx;'>请先选择地址</text>
+    </view>
+
+
+
+    <view class='right'>
+      <image src='/pics/icons/jiantou_grey.png'></image>
+    </view>
+    <view class='xian'>
+      <image src='/pics/icons/xian.png'></image>
+    </view>
+  </view>
+
+
+  <view class='list' bindtap='showModal'>
+    <view class='list_icon1'>
+      <image src='/pics/icons/fuwu.png'></image>
+    </view>
+    <view class='list_text'>选择服务类型</view>
+    <view class='list_icon2'>
+      <image src='/pics/icons/jiantou_grey.png'></image>
+    </view>
+    <view class='list_n' wx:if="{{goyxuanState}}">{{array[index]}}小时</view>
+    <view class='list_n' wx:else>{{array1[index1]}}平方</view>
+  </view>
+
+  <view class='list'>
+
+    <picker mode="multiSelector" bindchange="bindMultiPickerChange" bindcolumnchange="bindMultiPickerColumnChange" value="{{multiIndex}}" range="{{multiArray}}">
+      <view class='list_icon1'>
+        <image src='/pics/icons/shijian.png'></image>
+      </view>
+      <view class='list_text'>选择服务时间</view>
+      <view class='list_icon2'>
+        <image src='/pics/icons/jiantou_grey.png'></image>
+      </view>
+      <view class='list_n' wx:if="{{nian}}">{{nian}}-{{yue}}-{{ri}} {{shi}}</view>
+      <view class='list_n' wx:else>{{orderData}}</view>
+    </picker>
+
+  </view>
+
+  <view class='list list1' bindtap='qingjieji'>
+    <view class='list_icon1'>
+      <image src='/pics/icons/qingjie.png'></image>
+    </view>
+    <view class='list_text'>使用到家清洁剂(5元/小时)</view>
+    <view class='list_icon2'>
+      <image src="{{qingjiejiState?'/pics/icons/xuan_hou.png':'/pics/icons/xuan_qian.png'}}"></image>
+    </view>
+  </view>
+
+  <!-- 选择服务类型 -->
+  <view class="commodity_screen" bindtap="hideModal" wx:if="{{showModalStatus}}"></view>
+  <view animation="{{animationData}}" class="commodity_attr_box" wx:if="{{showModalStatus}}">
+    <view class='t_header'>
+      <text>选择服务类型</text>
+      <view class='t_cha' bindtap="hideModal">
+        <image src='../../../pics/icons/hide.png'></image>
+      </view>
+    </view>
+    <view class='t_content'>
+      <view class='t_list'>
+        <image bindtap='t_gouxuan' src="{{goyxuanState?'/pics/icons/xuan_hou.png':'/pics/icons/xuan_qian.png'}}"></image>
+        <text bindtap='t_gouxuan' class='t_text'>40/小时</text>
+        <text class='t_ms'>请选择时间</text>
+        <view class='t_view' wx:if="{{goyxuanState}}" bindtap='t_time'>
+          <picker bindchange="bindPickerChange" value="{{index}}" range="{{array}}">
+            <text>{{array[index]}}</text>/小时
+          </picker>
+        </view>
+      </view>
+      <view class='t_list'>
+        <image bindtap='t_gouxuan' src="{{goyxuanState1?'/pics/icons/xuan_hou.png':'/pics/icons/xuan_qian.png'}}"></image>
+        <text bindtap='t_gouxuan' class='t_text'>3元/平米</text>
+        <text class='t_ms'>请选择面积</text>
+        <view class='t_view' wx:if="{{goyxuanState1}}" bindtap='t_time'>
+          <picker bindchange="bindPickerChange1" value="{{index1}}" range="{{array1}}">
+            <text>{{array1[index1]}}</text>/平米
+          </picker>
+        </view>
+      </view>
+      <view class='t_list' style='font-size:24rpx;height:24rpx;line-height:24rpx;'>
+        <image bindtap='t_gouxuan'></image>
+        <text class='t_ms' style='font-size:24rpx;height:24rpx;line-height:24rpx;padding:0;'>(2人:3小时)</text>
+        <view class='t_view' style='width:280rpx;font-size:24rpx;height:24rpx;line-height:24rpx;'>
+          <image class='xing' src='/icon/xing1.png'></image>
+          <image class='xing' src='/icon/xing1.png'></image>
+          <image class='xing' src='/icon/xing1.png'></image>
+          <image class='xing' src='/icon/xing1.png'></image>
+          <image class='xing' style='padding-right:13rpx;' src='/icon/xing1.png'></image>
+          五星好评</view>
+      </view>
+    </view>
+  </view>
+
+
+
+
+  <!-- 提交保洁订单 -->
+  <view class='footer'>
+    <view class='footer_left'>
+      <text>￥{{zongjiage}}元</text>
+      <text>含清洁费用15元</text>
+    </view>
+    <view class='footer_right' data-t="{{cart_info.address_info.mobile}}" data-d="{{cart_info.address_info.address}}" data-n="{{cart_info.address_info.rec_name}}" bindtap='tijiao'>下一步</view>
+  </view>
+
+
+
+
+  <view class="commodity_screen" bindtap="hideModal" wx:if="{{showModalStatus1}}"></view>
+  <view animation="{{animationData}}" style='height:1200rpx; background:#f5f4f9;' class="commodity_attr_box" wx:if="{{showModalStatus1}}">
+    <view class='t_header' style='background:#ff6b6b;'>
+      <text style='color:#fff;'>确认保洁订单</text>
+      <view class='t_cha' bindtap="hideModal">
+        <image src='../../../pics/icons/hide.png'></image>
+      </view>
+    </view>
+    <view class='dd_content'>
+      <view class='dd_list1' style='margin-top:20rpx;'>
+        <view class='dd_h'>
+          <image src='../../../pics/icons/dd_weizhi.png'></image>
+          <view class='dd_n'>
+            <text>{{cart_info.address_info.address}}</text>
+            <text>{{cart_info.address_info.rec_name}} {{cart_info.address_info.mobile}}</text>
+          </view>
+        </view>
+      </view>
+      <view class='dd_list1 dd_list'>
+        <view class='dd_h'>
+          <image src='../../../pics/icons/dd_shijian.png'></image>
+          <view class='dd_n'>
+            <text>{{nian}}-{{yue}}-{{ri}} {{shi}}</text>
+          </view>
+        </view>
+      </view>
+      <view class='dd_list1 dd_list'>
+        <view class='dd_h'>
+          <image src='../../../pics/icons/dd_baojieshi.png'></image>
+          <view class='dd_n'>
+            <text>系统自动推荐保洁师</text>
+          </view>
+        </view>
+      </view>
+      <view class='dd_list1 dd_list2' style='margin-top:20rpx;'>
+        <view wx:if="{{goyxuanState}}">
+          <text>保洁费用({{array[index]}}小时)</text>
+          <text>￥{{xiaoshijg?xiaoshijg:0}}</text>
+        </view>
+        <view wx:else>
+          <text>保洁费用({{array1[index1]}}平方)</text>
+          <text>￥{{pingfangjg?pingfangjg:0}}</text>
+        </view>
+      </view>
+
+      <view class='dd_list1 dd_list2'>
+        <text>清洁剂费用</text>
+        <text>￥{{qingjiejg?qingjiejg:0}}</text>
+      </view>
+      <view class='dd_list1 dd_list2 dd_list22'>
+        <text>优惠券</text>
+        <image src='../../../pics/icons/jiantou_grey.png'></image>
+        <text style='color:#888;'>暂无可用</text>
+      </view>
+      <view class='dd_list1 dd_list3'>
+        <image src='../../../pics/icons/dd_beizhu.png'></image>
+        <text>备注</text>
+        <input class='register-input' placeholder="请输入手机号" bindinput='phoneInput' bindblur="phoneOnBlur"></input>
+      </view>
+      <view class='dd_footer'>
+        <text>已优惠￥ 0 元</text>
+        <text>待支付￥ {{zongjiage}} 元</text>
+        <view class='footer_btn' bindtap='dd_pay' data-t="{{cart_info.address_info.mobile}}" data-d="{{cart_info.address_info.address}}" data-n="{{cart_info.address_info.rec_name}}" >去支付</view>
+      </view>
+    </view>
+  </view>
+</view>

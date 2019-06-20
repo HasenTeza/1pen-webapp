@@ -1,0 +1,55 @@
+/* 猜你喜欢 */
+.tuijian{
+  padding-top: 20rpx;
+  background-color: #f1f1f1;
+}
+.cnxh_content {
+  width: 96%;
+  padding: 0 2%;
+  display: flex;
+  flex-wrap: wrap;
+  /* justify-content: space-between; */
+}
+
+.cnxh_list {
+  width: 45%;
+  height: 530rpx;
+  background-color: #fff;
+  border-radius: 20rpx;
+  overflow: hidden;
+  margin: 2.5%;
+}
+
+.cnxh_list:nth-child(1), .cnxh_list:nth-child(2) {
+  margin-bottom: 0;
+}
+
+.cnxh_img {
+  width: 100%;
+  height: 340rpx;
+}
+
+.cnxh_text {
+  width: 90%;
+  height: 75rpx;
+  margin: 0 5%;
+  text-align: left;
+  font-size: 28rpx;
+  line-height: 36rpx;
+  word-break: break-all;
+  display: -webkit-box;
+  -webkit-box-orient: vertical;
+  -webkit-line-clamp: 2;
+  overflow: hidden;
+}
+
+.cnxh_jg {
+  display: block;
+  text-align: left;
+  font-size: 36rpx;
+  line-height: 36rpx;
+  color: #fa2551;
+  padding-top: 30rpx;
+  text-indent: 20rpx;
+}
+/* pages/m_index/tuijian/tuijian.wxss */
